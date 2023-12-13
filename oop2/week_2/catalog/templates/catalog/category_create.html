@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+  <div>
+    <h1 class="text-success">Создать категорию</h1>
+    <form method="post">
+      {{form.as_p}}
+      {% csrf_token %}
+      <button class="btn btn-success" type="submit">Добавить</button>
+    </form>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+    <div>
+        <h1 class="text-danger">Удаление категории</h1>
+        <p>Вы уверены, что хотите удалить категорию: {{category}}?</p>
+        <form method="post">
+            {% csrf_token %}
+            <button class="btn btn-danger" type="submit">Да, удалить</button>
+        </form>
+    </div>
+</div>
+{% endblock %}
